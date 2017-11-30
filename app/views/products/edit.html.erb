@@ -1,0 +1,26 @@
+<h1>Editando un producto existente</h1>
+<% if @product.errors.any? %>
+  <h2>Los siguientes errores impiden que puedas editar el producto :(</h2>
+  <ul>
+    <% @product.errors.full_messages.each do |msg| %>
+      <li>
+        <%= msg %>
+      </li>
+   <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @product do |f| %>
+  <p>
+   <%= f.label :name %> </br>
+   <%= f.text_field :name %> </br>
+  </p>
+  <p>
+   <%= f.label :description %> </br>
+ <!--
+  text_field_tag 'product[description]', "Descripción va acá", disabled: false %>
+  -->
+   <%= f.text_area :description %>
+  </p>
+   <%= f.submit %>
+<% end %>

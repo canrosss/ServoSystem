@@ -1,0 +1,13 @@
+
+<h1>Mostrando el producto</h1>
+<p>
+  Nombre: <%= @product.name %>
+</p>
+<p>
+  Descripción:
+</p>
+<%= sanitize @product.description, tags: %w(strong, em, a, h2, ul, li, img), attributes: %w(href, src) %>
+<%= link_to "Editar este producto", edit_product_path(@product) %>
+<%= link_to "Volver al listado de productos", products_path %>
+
+

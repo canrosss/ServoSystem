@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   # Recurso para manejar products
   # new, index, show, update,
   resources :products
+
+  get 'index'
+
 end
