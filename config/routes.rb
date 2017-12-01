@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   # new, index, show, update,
   resources :products
 
-  get 'index'
+  #Cuando el navegador pida /pages/home manda a controller#vista home o index
+  #   ruta -> controller#vista
+  get '/contact', to:'pages#contact'
+  root :to => 'pages#home'
+
 
 end
