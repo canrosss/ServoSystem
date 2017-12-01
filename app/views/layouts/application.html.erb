@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ServoSystem</title>
+    <title>ServoSystem Garro, la tienda online de partes para CNC </title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,9 @@
   </head>
 
   <body>
+    <%= render 'layouts/navigation' %>
+    <%= render 'layouts/messages' %>
+
     <%= yield %>
     <% flash.each do |name, msg| %>
       <ul>
@@ -18,5 +21,8 @@
       </ul>
     <% end %>
 
+
+    <%= render 'layouts/footer' %>
+    <%= debug(params) if Rails.env.development? %>
   </body>
 </html>
