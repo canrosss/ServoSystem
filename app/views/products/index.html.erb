@@ -1,25 +1,22 @@
 
-<h1>Listando todos los productos </h1>
 
 <p>
-  <%= link_to 'Dar de alta nuevo producto', new_product_path %>
 </p>
 
-<table>
-  <tr>
-    <th>Nombre</th>
-    <th>Descripción</th>
-  </tr>
+<h2>Lista de productos</h2>
+
+<table class="table table-striped">
+  <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+      </tr>
+  </thead>
   <% @product.each do |product| %>
     <tr>
       <td>
         <p>
            <%= product.name %>
-         </p>
-       </td>
-       <td>
-         <p>
-           <%= product.description %>
          </p>
        </td>
      <td>
@@ -35,3 +32,6 @@
     </tr>
    <% end %>
 </table>
+        <p>
+          <%= link_to '[ Dar de alta nuevo producto ]', new_product_path %>
+        </p>
