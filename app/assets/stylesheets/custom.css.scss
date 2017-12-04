@@ -1,0 +1,26 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* EXAMPLE 6 - Background Logo*/
+.example6 .navbar-brand{
+  background: asset-url('logo.png') center / contain no-repeat;
+  width: 200px;
+}
+
+
+@font-face  {
+ font-family:"Westminster";src:url("WESTM.eot?")
+ format("eot"),url("WESTM.woff")
+ format("woff"),url("WESTM.ttf")
+ format("truetype"),url("WESTM.svg#Westminster")
+ format("svg");font-weight:normal;font-style:normal;
+}
+
+#logo {
+    font-family: "Westminster";
+    color: ffffff;
+    font-size: 3em;
+    padding-top: 0.7em;
+}
