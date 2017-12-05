@@ -48,5 +48,14 @@
   -->
    <%= f.text_area(:description, size: "40") %>
   </p>
+
+  <p>
+   <%= f.label :body %> </br>
+ <!--
+  text_field_tag 'product[description]', "Descripción va acá", disabled: false %>
+  -->
+   <%= f.text_area(:body, size: "40") %>
+  </p>
+
    <%= f.submit %>
 <% end %>
