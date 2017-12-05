@@ -56,3 +56,27 @@ footer ul li {
   float: left;
   margin-left: 15px;
 }
+
+.glyphicon.glyphicon-chevron-right{
+   color:black;
+}
+
+.glyphicon.glyphicon-chevron-left{
+   color:black;
+}
+
+.carousel-inner{
+  background-color: none;
+/*  border: 1px solid red;*/
+  text-align: center;
+}
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}
+
+.carousel-control {
+  width: 0;
+}
+
+.carousel-indicators li { display: none; }
