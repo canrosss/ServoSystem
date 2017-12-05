@@ -13,23 +13,24 @@
         <ul class="nav navbar-nav navbar-right">
          <% if (current_page?(controller:'pages', action:'home')) %> <li class="active"> <% else %> <li> <% end %>
             <%= link_to "Inicio", root_path %>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Productos <span class="caret"></span></a>
+            <%= link_to 'Products', products_path %>
+            <ul class="dropdown-menu" role="menu">
+              <li class="dropdown-header">CNC Industrial</li>
+              <li><a href="#">Maquinas CNC</a></li>
+              <li><a href="#">Arduino Controladores</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Automatización Industrial</li>
+              <li><a href="#">Proyectos de automatización</a></li>
+              <li><a href="#">Soluciones a medida</a></li>
+            </ul>
+         </li>
          <% if (current_page?(controller:'pages', action:'about')) %> <li class="active"> <% else %> <li> <% end %>
             <%= link_to "Acerca de", about_path %>
          </li>
          <% if (current_page?(controller:'pages', action:'contact')) %> <li class="active"> <% else %> <li> <% end %>
             <%= link_to "Contáctenos", contact_path %>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Productos <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
         </ul>
       </div>
       <!--/.nav-collapse -->
