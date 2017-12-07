@@ -15,19 +15,19 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active center">
-        <%= image_tag @product.image_1 %>
+        <%= image_tag(@product.image_1, class: "img-responsive") %>
       </div>
 
       <div class="item">
-        <%= image_tag @product.image_2 %>
+        <%= image_tag(@product.image_2, class: "img-responsive") %>
       </div>
 
       <div class="item">
-        <%= image_tag @product.image_3 %>
+        <%= image_tag(@product.image_3, class: "img-responsive") %>
       </div>
 
       <div class="item">
-        <%= image_tag @product.image_4 %>
+        <%= image_tag(@product.image_4, class: "img-responsive") %>
       </div>
 
     </div>
@@ -43,7 +43,7 @@
     </a>
   </div>
 
-<%= sanitize @product.body, tags: %w(table th tr td h3 p ul li em), attributes: %w(id class style) %>
+<%= sanitize @product.body, tags: %w(table tbody th tr td h3 p ul li em img button div), attributes: %w(id class style src) %>
 
 <div class="center">
  <%= link_to "[ Editar este producto ]", edit_product_path(@product) %>
