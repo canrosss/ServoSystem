@@ -29,6 +29,13 @@
           <%= link_to 'Ver', product_path(product)%>
         </p>
       </td>
+      <td>
+        <p>
+          <%= link_to 'Borrar', product_path(product), method: :delete,data:{confirm:"¿Estas seguro?"}%>
+
+        </p>
+      </td>
+
     </tr>
    <% end %>
 </table>

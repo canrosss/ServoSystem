@@ -16,6 +16,13 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    flash[:notice] = "El producto fue borrado exitosamente."
+    redirect_to products_path
+  end
+
   def update
     @product = Product.find(params[:id])
     if @product.update(product_params)
